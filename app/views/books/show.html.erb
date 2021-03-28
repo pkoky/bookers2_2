@@ -1,8 +1,11 @@
+<%= render "books/list", book:@booknew, user:@user %>
 <div class="col-md-8 offset-md-1">
+
   <h2>Book detail</h2>
   <table class="table">
-   <td>image<br/>
+   <td>
      <%= link_to user_path(@book.user.id) do %>
+     <%= attachment_image_tag @book.user, :profile_image, :fill, 40, 40, fallback: "no-image-150.png" size: "40x40" %><br/>
      <%= @book.user.name %>
      <% end %>
    </td>
