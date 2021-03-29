@@ -36,7 +36,7 @@ class BooksController < ApplicationController
       if
         @book.user == current_user
       else
-        redirect_to user_path(current_user)
+        redirect_to books_path
       end
     end
 
